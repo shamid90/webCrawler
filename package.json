@@ -1,0 +1,25 @@
+{
+  "name": "webcrawler",
+  "version": "1.0.0",
+  "description": "▶ Open a Terminal  \r ▶ Run bash databaseScript.sh  \r ▶ Enter the password of the user \"root\"",
+  "main": "app.js",
+  "dependencies": {
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shamid90/webCrawler.git"
+  },
+  "keywords": [],
+  "author": "shamid90",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shamid90/webCrawler/issues"
+  },
+  "homepage": "https://github.com/shamid90/webCrawler#readme"
+}
