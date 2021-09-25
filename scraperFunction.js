@@ -31,20 +31,20 @@ const scrapeCategoryLink = async (categoryLink) => {
         return productsInfo
     });
 
-    //   console.log(products_details)
+    console.log(products_details)
     await categoryResult.bulkCreate(products_details)
     await browser.close()
 }
 
-const saveTheCategoryResultForAllLinks = () => {
-    CategoryUrl.findAll()
-        .then((categoryLinks) => {
-            categoryLinks.forEach((categoryLink) => {
-                scrapeCategoryLink(categoryLink.dataValues.url)
-            })
-        }).catch((error) => {
-            console.log(error);
+const saveTheCategoryResultForAllLinks = async () => {
+    try {
+        const categoryLinks =  await CategoryUrl.findAll();
+        categoryLinks.forEach((categoryLink) => {
+            scrapeCategoryLink(categoryLink.dataValues.url)
         })
+    } catch(error) {
+        console.log(error);
+    }
 }
 
 module.exports = saveTheCategoryResultForAllLinks;

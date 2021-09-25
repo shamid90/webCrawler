@@ -6,7 +6,7 @@
 ▶ Enter the password of the user "root"
 
 ## Start the program
-▶ Run $npm install
+▶ Run $npm install  
 ▶ Run $npm start
 
 ## Requirements
